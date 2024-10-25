@@ -1,5 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Inter", serif;
+    scroll-behavior: smooth;
+}
+/* main-color
+#343a40
+#364fc7
+#5c7cfa
+#fff
+*/
+
+body {
+    background: linear-gradient(to right, #364fc7, #5c7cfa);
+    font-family: "Inter", serif;
+    color: #fff;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+p, li {
+    font-size: 18px;
+    line-height: 2;
+}
+
+.container {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+
+.container-nav {
+    display: flex;
+    gap: 40px;
+    justify-content: end;
+    align-items: center;
+    height: 80px;
+    padding: 12px;
+    list-style: none;
+    background-color: #fff;
+}
+
+.nav-item a:link, .nav-item a:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    color:#000;
+    font-weight: 700;
+}
+
+.nav-item a:hover, .nav-item a:active{
+    color:#3b3b3b;
+}
+
+.nav-item:last-child {
+    margin-right: 50px;
+}
+
+.main-background {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://img.freepik.com/free-photo/young-woman-standing-universe-texture-projection_23-2149512132.jpg?t=st=1729877307~exp=1729880907~hmac=5f3afacd94351f4864e3fc4cd9521da02673bfaaa1256263a072f3002add7a97&w=1380");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.introduction {
+    position: relative;
+}
+
+.introduction h1{
+    font-size: 72px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+}
+
+.projects{
+    margin: 80px auto;
+    width: 1000px;
+}
+
+.detail-project, .input, .output{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.containt-put {
+    display: flex;
+    width: 60%;
+    gap: 80px;
+}
+
+.input {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    color: #343a40;
+    padding: 40px 50px;
+}
+
+.output {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+    background-color: #343a40;
+    color: #fff;
+    padding: 40px 50px;
+}
+
+.input h2, .output h2{
+    text-align: center;
+}
+
+.input ul, .output ul{
+    margin-left: 18px;
+    display: grid;
+    gap: 20px;
+    list-style: square;
+}
+
+.container-material{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.material {
+    justify-items: center;
+}
+
+.material-img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+.members {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.members h2 {
+    grid-column: 1/-1;
+    justify-self: center;
+}
+
+.member {
+    justify-self: center;
 }

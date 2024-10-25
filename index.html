@@ -3,9 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <p>ball narak chan</p>
+    <nav>
+        <div class="container">
+            <ul class="container-nav">
+                <li class="nav-item"><a href="#">Home</a></li>
+                <li class="nav-item"><a href="#project">Project</a></li>
+                <li class="nav-item"><a href="#aboutus">About us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="introduction">
+        <div class="main-background"></div>
+        <h1 class="maintext">LED-Based Mood Light with Color Fade</h1>
+    </div>
+    <section class="container-content" id="project">
+        <div class="detail-project projects">
+            <h2>Abstract</h2>
+            <p>โครงการนี้มีเป้าหมายสร้างโคมไฟที่เปลี่ยนสีแบบไล่ระดับอัตโนมัติหรือควบคุมผ่านแอป Blynk โดยใช้อุปกรณ์ Arduino, LED RGB หรือ RGB Strip, Breadboard, เซ็นเซอร์ตรวจจับการเคลื่อนไหว (PIR) และเซ็นเซอร์วัดอุณหภูมิและความชื้น (DHT) เพื่อให้ LED เปลี่ยนสีไล่ระดับอย่างนุ่มนวล สร้างบรรยากาศที่ผ่อนคลาย พร้อมเชื่อมต่ออุปกรณ์เข้ากับบอร์ดควบคุม</p>
+        </div>
+        <div class="process-project projects">
+            <h2>Process</h2>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ut laudantium, enim quod natus expedita commodi excepturi earum itaque vero beatae delectus quidem amet doloribus repellat placeat, eligendi vitae maxime.
+        </div>
+        <div class="containt-put projects">
+            <div class="input projects">
+                <h2>input</h2>
+                <ul>
+                    <li>การปรับค่าจากDashBoard ผ่านArduinoCloud ซึ่งจะให้ค่าออกมาเป็น RGB เพื่อเป็นinput ให้กับหลอดไฟ</li>
+                    <li>อุณหภูมิที่วัดได้จะเป็น input ในการปรับสีของหลอดไฟไปตามอุณหภูมิที่วัดได้</li>
+                    <li>ระยะทางที่วัดได้ เป็น input ในการทำให้หลอดนั้นเริ่มทำงาน เมื่อคนมานั่งในระยะที่กำหนด</li>
+                </ul>
+            </div>
+            <div class="output projects">
+                <h2>output</h2>
+                <ul>
+                    <li>แสงสีและความสว่างของหลอดไฟที่เปลี่ยนไปตามค่าในDashBoard</li>
+                    <li>แสงสีของหลอดไฟที่เปลี่ยนไปตามค่าอุณภูมิที่วัดได้</li>
+                    <li>หลอดไฟเริ่มทำงานเมื่อมีคนมานั่งในระยะที่กำหนด</li>
+                </ul>
+                <img src="" alt="">
+            </div>
+        </div>
+        <div class="material-project projects">
+            <div class="container-material">
+                <div class="DHT11 material">
+                    <img class="material-img" src="https://lh3.googleusercontent.com/proxy/g-Oi55eMqEKJIeM1KjwS8FcshwRLrMZMswOwvnT2ZYHmAQqS6HCzjE1nf_eITurvhF_RI5kZ4TnCJOgrSAtKpBb5oFdOI2Y" alt="DHT11">
+                    <h3>DHT11</h3>
+                </div>
+                <div class="W2818 material">
+                    <img class="material-img" src="https://www.sdiplight.com/wp-content/uploads/2019/11/ws2818-led-strip-60-LEDs-per-meter-white-board.jpg" alt="">
+                    <h3>W2818</h3>
+                </div>
+                <div class="PIR material">
+                    <img class="material-img" src="https://th.sz-kuongshun.com/Content/File_Img/S_Product/2016-08-27/201608271010086902635.jpg" alt="PIR">
+                    <h3>PIR</h3>
+                </div>
+                <div class="Arduino material">
+                    <img class="material-img" src="https://upload.wikimedia.org/wikipedia/commons/3/38/Arduino_Uno_-_R3.jpg" alt="Arduino">
+                    <h3>Arduino</h3>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <footer id="aboutus">
+        <div class="link-to-anoter projects">
+            <h2>linkไปยังไฟล์งานต่างๆ</h2>
+            <div class="youtube">
+                <div class="icon"></div>
+                <a href=""></a>
+            </div>
+            <div class="poster">
+                <div class="icon"></div>
+                <a href=""></a>
+            </div>
+            <div class="arduino-cloud">
+                <div class="icon"></div>
+                <a href=""></a>
+            </div>
+            <div class="github">
+                <div class="icon"></div>
+                <a href=""></a>
+            </div>
+        </div>
+        <div class="members projects">
+            <h2>รายชื่อสมาชิกกลุ่ม</h2>
+            <div class="member">
+                <img src="" alt="">
+                <span>66070063 ณัฐวัฒน์ โชติปัญจะวงษ์</span>
+            </div>
+            <div class="member">
+                <img src="" alt="">
+                <span>66070077 ธนพล วันคำกูด</span>
+            </div>
+            <div class="member">
+                <img src="" alt="">
+                <span>66070080 ธนภัทร มลิแก้ว</span>
+            </div>
+            <div class="member">
+                <img src="" alt="">
+                <span>66070092 ธีธัช ทองคำแท้</span>
+            </div>
+        </div>
+    </footer>
+    <script src="app.js"></script>
 </body>
 </html>
