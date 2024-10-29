@@ -247,12 +247,16 @@ p, li {
     align-items: center;
 }
 
-.link a{
+.link a:link, .link a:visited{
     text-decoration: none;
     font-size: 18px;
     color: #364fc7;
     margin-left: 15px;
     margin-right: 50px;
+}
+
+.link a:hover, .link a:active{
+    color: #5c7cfa;
 }
 
 .github {
