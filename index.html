@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>LED-Based Mood Light with Color Fade</title>
 </head>
 <body>
@@ -18,7 +19,7 @@
     </nav>
     <div class="introduction">
         <div class="main-background"></div>
-        <h1 class="maintext">LED-Based Mood Light with Color Fade</h1>
+        <h1 class="maintext">LED-Based <span class="spec-headers">Mood Light</span> with Color Fade</h1>
     </div>
     <section class="container-content" id="project">
         <div class="detail-project projects">
@@ -27,12 +28,12 @@
         </div>
         <div class="process-project projects">
             <h2>Process</h2>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ut laudantium, enim quod natus expedita commodi excepturi earum itaque vero beatae delectus quidem amet doloribus repellat placeat, eligendi vitae maxime.
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus tempore, debitis, possimus at totam ducimus rerum iste error laboriosam voluptate nulla asperiores quis modi. Delectus, doloremque nobis! Minima similique nulla vero vel, laudantium sint optio ratione, itaque maiores amet voluptas nemo harum eos doloribus, dolore nihil tempore rerum fugit veniam! Veniam ut et sequi asperiores, velit veritatis quidem aliquid! Eligendi mollitia, reiciendis exercitationem assumenda sint earum molestiae tenetur, blanditiis doloribus saepe est iure perferendis voluptas. Ipsam quisquam reprehenderit tempore labore dolorum. Fugiat ad in, illo blanditiis, commodi consequatur distinctio nemo facilis culpa nesciunt magni. Rem molestias placeat perferendis. Eligendi ipsum, quod quisquam harum minima nemo asperiores eius expedita magnam delectus aut cupiditate repellendus sunt odit impedit excepturi, enim alias reprehenderit.</p>
         </div>
         <div class="containt-put projects">
             <div class="input projects">
                 <h2>input</h2>
-                <ul>
+                <ul class="list-put">
                     <li>การปรับค่าจากDashBoard ผ่านArduinoCloud ซึ่งจะให้ค่าออกมาเป็น RGB เพื่อเป็นinput ให้กับหลอดไฟ</li>
                     <li>อุณหภูมิที่วัดได้จะเป็น input ในการปรับสีของหลอดไฟไปตามอุณหภูมิที่วัดได้</li>
                     <li>ระยะทางที่วัดได้ เป็น input ในการทำให้หลอดนั้นเริ่มทำงาน เมื่อคนมานั่งในระยะที่กำหนด</li>
@@ -40,7 +41,7 @@
             </div>
             <div class="output projects">
                 <h2>output</h2>
-                <ul>
+                <ul class="list-put">
                     <li>แสงสีและความสว่างของหลอดไฟที่เปลี่ยนไปตามค่าในDashBoard</li>
                     <li>แสงสีของหลอดไฟที่เปลี่ยนไปตามค่าอุณภูมิที่วัดได้</li>
                     <li>หลอดไฟเริ่มทำงานเมื่อมีคนมานั่งในระยะที่กำหนด</li>
@@ -56,11 +57,11 @@
                 </div>
                 <div class="W2818 material">
                     <img class="material-img" src="https://www.sdiplight.com/wp-content/uploads/2019/11/ws2818-led-strip-60-LEDs-per-meter-white-board.jpg" alt="">
-                    <h3>W2818</h3>
+                    <h3>W281</h3>
                 </div>
                 <div class="PIR material">
-                    <img class="material-img" src="https://th.sz-kuongshun.com/Content/File_Img/S_Product/2016-08-27/201608271010086902635.jpg" alt="PIR">
-                    <h3>PIR</h3>
+                    <img class="material-img" src="https://inwfile.com/s-fa/xt975l.jpg" alt="PIR">
+                    <h3>ultrasonic sensor</h3>
                 </div>
                 <div class="Arduino material">
                     <img class="material-img" src="https://upload.wikimedia.org/wikipedia/commons/3/38/Arduino_Uno_-_R3.jpg" alt="Arduino">
@@ -72,40 +73,42 @@
     </section>
     <footer id="aboutus">
         <div class="link-to-anoter projects">
-            <h2>linkไปยังไฟล์งานต่างๆ</h2>
-            <div class="youtube">
-                <div class="icon"></div>
-                <a href=""></a>
+            <div class="youtube link">
+                <div class="icon"><i class="fa-brands fa-youtube fa-2xl size" style="color: #364fc7;"></i></i></div>
+                <a href="#">youtube</a>
             </div>
-            <div class="poster">
-                <div class="icon"></div>
-                <a href=""></a>
+            <div class="poster link">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-size">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" />
+                  </svg>
+                </div>
+                <a href="#">poster</a>
             </div>
-            <div class="arduino-cloud">
+            <!-- <div class="arduino-cloud">
                 <div class="icon"></div>
                 <a href=""></a>
-            </div>
-            <div class="github">
-                <div class="icon"></div>
-                <a href=""></a>
+            </div> -->
+            <div class="github link">
+                <div class="icon"><i class="fa-brands fa-github-alt fa-2xl size" style="color: #364fc7;"></i></i></div>
+                <a href="#">github</a>
             </div>
         </div>
         <div class="members projects">
-            <h2>รายชื่อสมาชิกกลุ่ม</h2>
+            <h2>Our team</h2>
             <div class="member">
-                <img src="" alt="">
+                <img src="image/1680021999765.jpg" alt="aun">
                 <span>66070063 ณัฐวัฒน์ โชติปัญจะวงษ์</span>
             </div>
             <div class="member">
-                <img src="" alt="">
+                <img src="image/IMG_0069.jpg" alt="toto">
                 <span>66070077 ธนพล วันคำกูด</span>
             </div>
             <div class="member">
-                <img src="" alt="">
+                <img src="image/1672066371462.jpg" alt="nickel">
                 <span>66070080 ธนภัทร มลิแก้ว</span>
             </div>
             <div class="member">
-                <img src="" alt="">
+                <img src="image/IMG_2277.jpg" alt="tee">
                 <span>66070092 ธีธัช ทองคำแท้</span>
             </div>
         </div>

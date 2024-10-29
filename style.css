@@ -49,12 +49,12 @@ p, li {
 .nav-item a:link, .nav-item a:visited{
     text-transform: uppercase;
     text-decoration: none;
-    color:#000;
+    color:#343a40;
     font-weight: 700;
 }
 
 .nav-item a:hover, .nav-item a:active{
-    color:#3b3b3b;
+    color:#343a40;
 }
 
 .nav-item:last-child {
@@ -63,7 +63,7 @@ p, li {
 
 .main-background {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://img.freepik.com/free-photo/young-woman-standing-universe-texture-projection_23-2149512132.jpg?t=st=1729877307~exp=1729880907~hmac=5f3afacd94351f4864e3fc4cd9521da02673bfaaa1256263a072f3002add7a97&w=1380");
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("image/IMG_0303.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -81,35 +81,69 @@ p, li {
     left: 50%;
 }
 
-.projects{
-    margin: 80px auto;
-    width: 1000px;
+.spec-headers {
+    color: #5c7cfa;
 }
 
-.detail-project, .input, .output{
+.detail-project, .process-project {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 120px;
+    height: 600px;
+    background-color: #364fc7;
+}
+
+.detail-project {
+    background-color:#343a40;
+}
+
+.projects{
+    margin: 0 auto;
+    width: 100%;
+}
+
+.input, .output{
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
+.detail-image {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .containt-put {
     display: flex;
-    width: 60%;
-    gap: 80px;
+    width: 100%;
+    border: none;
 }
 
 .input {
+    width: 100%;
+    margin: 0;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
     background-color: #fff;
     color: #343a40;
-    padding: 40px 50px;
+    padding: 150px 50px;
+}
+
+.list-put {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .output {
+    width: 100%;
+    margin: 0;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
     background-color: #343a40;
     color: #fff;
-    padding: 40px 50px;
+    padding: 150px 50px;
 }
 
 .input h2, .output h2{
@@ -117,20 +151,38 @@ p, li {
 }
 
 .input ul, .output ul{
-    margin-left: 18px;
     display: grid;
     gap: 20px;
     list-style: square;
 }
 
+.material-project {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    width: 100%;
+    background-color: #364fc7;
+}
+
 .container-material{
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 100px;
 }
 
 .material {
     justify-items: center;
+}
+
+.material h3{
+    padding: 12px;
+    text-align: center;
+    width: 100%;
+    border-top: 2px ridge #fff;
+    border-bottom: 2px ridge #fff;
 }
 
 .material-img {
@@ -139,16 +191,70 @@ p, li {
     margin-bottom: 20px;
 }
 .members {
+    padding: 60px 400px;
+    margin: 0;
+    background-color: #343a40;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 32px;
+    gap: 45px;
 }
 
 .members h2 {
+    align-self: center;
     grid-column: 1/-1;
     justify-self: center;
+    margin-bottom: 20px;
 }
 
 .member {
+    font-size: 18px;
+    width: 600px;
+    display: flex;
+    align-items: center;
     justify-self: center;
+}
+
+.member img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-right: 40px;
+}
+
+.size {
+    font-size: 100px;
+}
+
+.icon-size {
+    width: 40px;
+    stroke: #364fc7;
+}
+
+.link-to-anoter {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #364fc7;
+    margin-left: 15px;
+    margin-right: 50px;
+}
+
+.github {
+    margin-right: 0;
 }
