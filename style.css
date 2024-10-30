@@ -190,14 +190,23 @@ p, li {
     height: 150px;
     margin-bottom: 20px;
 }
+
 .members {
-    padding: 60px 400px;
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: #343a40;
+    padding: 60px 0;
+    margin: 0 auto;
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 45px;
+}
+
+.container-members {
+    padding: 30px 0;
+    background-color: #343a40;
+    display: flex;
+    gap: 35px;
 }
 
 .members h2 {
@@ -209,8 +218,9 @@ p, li {
 
 .member {
     font-size: 18px;
-    width: 600px;
+    width: 300px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-self: center;
 }
@@ -219,7 +229,7 @@ p, li {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    margin-right: 40px;
+    margin-bottom: 40px;
 }
 
 .size {
