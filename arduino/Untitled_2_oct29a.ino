@@ -13,7 +13,6 @@ const int dhtPin = 12;
 #define DHTPIN 12
 #define DHTTYPE DHT11
 DHT dht(DHTPIN, DHTTYPE);
-int counting = 0;
 int off = 0;
 long duration;
 int distanceCm, distanceInch;
@@ -88,12 +87,7 @@ void loop() {
     Serial.println(" cm");
 
     distance = distanceCm;
-  // if (brightness == 0){
-  //   brightness = ceil(distance/100.0*150.0);
-  //   brightness = 10 > brightness ? 10:brightness;
-  //   strip.setBrightness(brightness);
-  //   off = 0;
-  // }
+  // control LED with distance from Ultrasonic sensor
   if (off >= 2){
     brightness = 0;
     off = 0;
