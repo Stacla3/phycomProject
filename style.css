@@ -44,6 +44,7 @@ p, li {
     padding: 12px;
     list-style: none;
     background-color: #fff;
+    box-shadow: 0 2px 5px 0 #343a40;
 }
 
 .nav-item a:link, .nav-item a:visited{
@@ -113,12 +114,12 @@ p, li {
 .process-img {
     margin: auto 0;
     width: 40%;
-    height: 40%;
+    height: 350px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
 }
 
 .process-project {
-    gap: 20px;
+    gap: 25px;
     padding: 120px;
     display: flex;
     background-color: #364fc7;
@@ -147,6 +148,7 @@ p, li {
 }
 
 .containt-put {
+    position: relative;
     display: flex;
     width: 100%;
     border: none;
@@ -155,10 +157,21 @@ p, li {
 .input {
     width: 100%;
     margin: 0;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
     background-color: #fff;
     color: #343a40;
     padding: 150px 50px;
+}
+
+.input::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: " ";
+    background-color: #343a40;
+    width: 2px;
+    height: 70%;
+
 }
 
 .list-put {
@@ -171,9 +184,8 @@ p, li {
 .output {
     width: 100%;
     margin: 0;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
-    background-color: #343a40;
-    color: #fff;
+    background-color: #fff;
+    color: #343a40;
     padding: 150px 50px;
 }
 
@@ -248,9 +260,10 @@ p, li {
 }
 
 .member {
+
     padding: 40px 15px;
-    border: 1px solid #fff;
-    /* box-shadow: 0 0 5px #fff; */
+    /* border: 1px solid #fff; */
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
     color: #fff;
     font-size: 18px;
     width: 300px;
