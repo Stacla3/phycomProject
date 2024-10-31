@@ -18,3 +18,6 @@ https://stacla3.github.io/phycomProject/
 
 ## Video นำเสนอ Project
 https://youtu.be/r84wWzmqakk?feature=shared
+
+## Poster รายละเอียด Project
+https://drive.google.com/file/d/1IkUBCZ60hH3_VombWjdBr5A3yrtd6tSv/view?usp=sharing
