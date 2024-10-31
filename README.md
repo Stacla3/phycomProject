@@ -16,4 +16,4 @@ Project นี้มีเป้าหมายเพื่อสร้างโ
 ## Website รายละเอียด Project
 https://stacla3.github.io/phycomProject/
 
-## Vedio นำเสนอ Project
+## Video นำเสนอ Project
