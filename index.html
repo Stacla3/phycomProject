@@ -24,27 +24,73 @@
     <section class="container-content" id="project">
         <div class="detail-project projects">
             <h2>Abstract</h2>
-            <p>โครงการนี้มีเป้าหมายสร้างโคมไฟที่เปลี่ยนสีแบบไล่ระดับอัตโนมัติหรือควบคุมผ่านแอป Blynk โดยใช้อุปกรณ์ Arduino, LED RGB หรือ RGB Strip, Breadboard, เซ็นเซอร์ตรวจจับการเคลื่อนไหว (PIR) และเซ็นเซอร์วัดอุณหภูมิและความชื้น (DHT) เพื่อให้ LED เปลี่ยนสีไล่ระดับอย่างนุ่มนวล สร้างบรรยากาศที่ผ่อนคลาย พร้อมเชื่อมต่ออุปกรณ์เข้ากับบอร์ดควบคุม</p>
+            <p>โปรเจกต์นี้พัฒนาระบบไฟ LED ที่สามารถปรับเปลี่ยนความสว่างและสีได้ตามความต้องการของผู้ใช้ ระบบเชื่อมต่อกับ Arduino Cloud 
+                ผ่านบอร์ด Arduino Uno R4 Wi-Fi ซึ่งช่วยให้ผู้ใช้สามารถควบคุมสีของแสง LED ได้โดยปรับค่า RGB ผ่าน Dashboard Arduino Cloud 
+                พร้อมกันนี้ ระบบยังใช้เซ็นเซอร์ Ultrasonic สำหรับตรวจจับระยะทาง เพื่อเปิดหรือปิดไฟเองอัตโนมัติ เพื่อเป็นการประหยัดพลังงานเมื่อไม่มีผู้ใช้อยู่หน้าโต๊ะทำงาน
+                และลดความสว่างลงอัตโนมัติหากผู้ใช้นั่งอยู่ใกล้ เพื่อหลีกเลี่ยงการระคายเคืองสายตา 
+                อีกทั้งแสดงผลข้อมูลระยะทางจากUltrasonic Sensorและค่าอุณหภูมิจากเซ็นเซอร์ DHT11 บน Dashboard แบบเรียลไทม์ 
+                ทั้งหมดนี้มีเป้าหมายเพื่อให้ผู้ใช้สามารถปรับแต่งบรรยากาศแสงในห้องได้ตามความต้องการ</p>
         </div>
         <div class="process-project projects">
-            <h2>Process</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus tempore, debitis, possimus at totam ducimus rerum iste error laboriosam voluptate nulla asperiores quis modi. Delectus, doloremque nobis! Minima similique nulla vero vel, laudantium sint optio ratione, itaque maiores amet voluptas nemo harum eos doloribus, dolore nihil tempore rerum fugit veniam! Veniam ut et sequi asperiores, velit veritatis quidem aliquid! Eligendi mollitia, reiciendis exercitationem assumenda sint earum molestiae tenetur, blanditiis doloribus saepe est iure perferendis voluptas. Ipsam quisquam reprehenderit tempore labore dolorum. Fugiat ad in, illo blanditiis, commodi consequatur distinctio nemo facilis culpa nesciunt magni. Rem molestias placeat perferendis. Eligendi ipsum, quod quisquam harum minima nemo asperiores eius expedita magnam delectus aut cupiditate repellendus sunt odit impedit excepturi, enim alias reprehenderit.</p>
+            <div class="left-container">
+                <h2>Process</h2>
+                <ol>
+                    <li>
+                        <h3>การเชื่อมต่อ Wi-Fi</h3>
+                        <ul>
+                            <li>เมื่อเปิดใช้งานบอร์ด Arduino Uno R4 Wi-Fi ต้องเชื่อมต่อเข้ากับ Wi-Fi เพื่อให้สามารถใช้งาน Dashboard บน Arduino Cloud ได้</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>การอ่านค่าเซ็นเซอร์และการควบคุมหลอดไฟ</h3>
+                        <ul>
+                            <li>
+                                <strong>Ultrasonic Sensor:</strong> เซ็นเซอร์จะตรวจจับระยะทางและส่งค่าไปที่บอร์ด Arduino
+                                <ul>
+                                    <li>ถ้าระยะทางที่วัดได้น้อยกว่าหรือเท่ากับ 100 ซม. หลอด W2812 LED Strip จะเปิดใช้งาน</li>
+                                    <li>ถ้าระยะทางมากกว่า 100 ซม. หลอดไฟจะดับลงภายในเวลาไม่เกิน 7 วินาที</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong>การควบคุมความสว่างของไฟ (Brightness):</strong> ความสว่างของหลอดไฟจะปรับตามระยะทางที่วัดได้
+                                <ul>
+                                    <li>ถ้าระยะทางน้อย ความสว่างจะลดลงเพื่อป้องกันการระคายเคืองของผู้ใช้</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>การควบคุมสีไฟผ่าน Dashboard บน Arduino Cloud</h3>
+                        <ul>
+                            <li>Dashboard มีส่วนสำหรับการปรับแสงไฟตามค่า RGB ซึ่งผู้ใช้สามารถเปลี่ยนสีของหลอดไฟได้</li>
+                            <li>Dashboard จะส่งคืนค่า RGB ที่ปรับแล้วไปที่โค้ดบน Arduino เพื่อปรับสีของหลอดไฟตามที่ผู้ใช้เลือก</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>การแสดงข้อมูลจากเซ็นเซอร์ต่าง ๆ บน Dashboard</h3>
+                        <ul>
+                            <li>ส่วนที่ 1: สำหรับการปรับเปลี่ยนสีของไฟตามค่า RGB</li>
+                            <li>ส่วนที่ 2: แสดงระยะทางที่วัดได้จาก Ultrasonic Sensor เพื่อให้ผู้ใช้ทราบข้อมูลการตรวจจับระยะ</li>
+                            <li>ส่วนที่ 3: แสดงกราฟค่าเฉลี่ยอุณหภูมิที่วัดได้จากเซ็นเซอร์ DHT11 เพื่อให้เห็นการเปลี่ยนแปลงของอุณหภูมิแบบ Real-time</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            <img class="process-img" src="image/dashboard.png" alt="Dashboard">
         </div>
         <div class="containt-put projects">
             <div class="input projects">
                 <h2>input</h2>
                 <ul class="list-put">
-                    <li>การปรับค่าจากDashBoard ผ่านArduinoCloud ซึ่งจะให้ค่าออกมาเป็น RGB เพื่อเป็นinput ให้กับหลอดไฟ</li>
-                    <li>อุณหภูมิที่วัดได้จะเป็น input ในการปรับสีของหลอดไฟไปตามอุณหภูมิที่วัดได้</li>
-                    <li>ระยะทางที่วัดได้ เป็น input ในการทำให้หลอดนั้นเริ่มทำงาน เมื่อคนมานั่งในระยะที่กำหนด</li>
+                    <li>ระยะทางที่วัดได้จากUltrasonic Sensor</li>
+                    <li>อุณหภูมิที่วัดได้จากเซนเซอร์ DHT11</li>
                 </ul>
             </div>
             <div class="output projects">
                 <h2>output</h2>
                 <ul class="list-put">
                     <li>แสงสีและความสว่างของหลอดไฟที่เปลี่ยนไปตามค่าในDashBoard</li>
-                    <li>แสงสีของหลอดไฟที่เปลี่ยนไปตามค่าอุณภูมิที่วัดได้</li>
-                    <li>หลอดไฟเริ่มทำงานเมื่อมีคนมานั่งในระยะที่กำหนด</li>
+                    <li>ค่าอุณหภูมิที่วัดได้ไปปรากฏขึ้นเป็นกราฟบนDashBoard</li>
                 </ul>
                 <img src="" alt="">
             </div>
@@ -57,7 +103,7 @@
                 </div>
                 <div class="W2818 material">
                     <img class="material-img" src="https://www.sdiplight.com/wp-content/uploads/2019/11/ws2818-led-strip-60-LEDs-per-meter-white-board.jpg" alt="">
-                    <h3>W281</h3>
+                    <h3>W2812</h3>
                 </div>
                 <div class="PIR material">
                     <img class="material-img" src="https://inwfile.com/s-fa/xt975l.jpg" alt="PIR">
@@ -90,7 +136,7 @@
             </div> -->
             <div class="github link">
                 <div class="icon"><i class="fa-brands fa-github-alt fa-2xl size" style="color: #364fc7;"></i></i></div>
-                <a href="#">github</a>
+                <a href="https://github.com/Stacla3/phycomProject" target="_blank">github</a>
             </div>
         </div>
         <div class="members projects">

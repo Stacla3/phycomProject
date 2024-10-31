@@ -21,7 +21,7 @@ body {
 }
 
 h2 {
-    font-size: 32px;
+    font-size: 36px;
 }
 
 p, li {
@@ -85,13 +85,44 @@ p, li {
     color: #5c7cfa;
 }
 
-.detail-project, .process-project {
+.detail-project{
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 120px;
     height: 600px;
     background-color: #364fc7;
+}
+
+.left-container {
+    width: 60%;
+}
+
+.left-container h2 {
+    margin-bottom: 20px;
+}
+
+.left-container li {
+    margin-left: 22px;
+}
+
+.left-container ul {
+    list-style: square;
+}
+
+.process-img {
+    margin: auto 0;
+    width: 40%;
+    height: 40%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.process-project {
+    gap: 20px;
+    padding: 120px;
+    display: flex;
+    background-color: #364fc7;
+    height: auto;
 }
 
 .detail-project {
@@ -206,7 +237,7 @@ p, li {
     padding: 30px 0;
     background-color: #343a40;
     display: flex;
-    gap: 35px;
+    gap: 55px;
 }
 
 .members h2 {
@@ -217,12 +248,20 @@ p, li {
 }
 
 .member {
+    padding: 40px 15px;
+    border: 1px solid #fff;
+    /* box-shadow: 0 0 5px #fff; */
+    color: #fff;
     font-size: 18px;
     width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-self: center;
+}
+
+.member:hover {
+    transform: scale(1.05);
 }
 
 .member img {
