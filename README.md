@@ -17,3 +17,4 @@ Project นี้มีเป้าหมายเพื่อสร้างโ
 https://stacla3.github.io/phycomProject/
 
 ## Video นำเสนอ Project
+https://youtu.be/r84wWzmqakk?feature=shared
